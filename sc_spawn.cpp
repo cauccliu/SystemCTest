@@ -8,7 +8,7 @@ public:
     }
  
     void CreateProcess() {
-        sc_spawn_options opts;
+        /* sc_spawn_options opts;
         opts.dont_initialize();
         opts.spawn_method();
         opts.set_sensitivity(&clk.pos());
@@ -16,7 +16,7 @@ public:
             std::cout << sc_time_stamp() << " Print" << std::endl;
         };
         // sc_core::sc_spawn(lmd, "sp1", &opts);
-        sc_core::sc_spawn(sc_bind(&Test::Print, this), "sp1", &opts);
+        sc_core::sc_spawn(sc_bind(&Test::Print, this), "sp1", &opts); */
     }
  
     void Print() {
