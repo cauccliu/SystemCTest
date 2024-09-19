@@ -4,6 +4,7 @@
 
 #include "header.h"
 #include "cluster.h"
+#include "block.h"
 
 class SoC
 : public sc_core::sc_module
@@ -19,7 +20,7 @@ public:
 	}
 
 	Cluster *cluster[cluster_num];
-
+	std::vector<Block*> blockPtrVec_;
 };
 
 #endif /* SOC_H_ */

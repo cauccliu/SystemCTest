@@ -4,6 +4,7 @@
 
 #include "header.h"
 #include "tlm.h"
+#include <mutex>
 
 
 class Warp
@@ -34,10 +35,12 @@ public:
 			std::string tmp = "warp_";
 			tmp += std::to_string(i);
 			warp[i] = new Warp(tmp.c_str());
+			
 		}
 	}
 
 	Warp *warp[warp_per_subcore];
+	std::mutex warp_ready_[warp_per_subcore]= {};
 };
 
 

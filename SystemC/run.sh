@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE=sc_spawn
+FILE=signal
 
 rm -rf $FILE
 g++ -std=c++17 -I/home/chang.liu/systemcLib/include -L/home/chang.liu/systemcLib/lib-linux64 -lsystemc -o $FILE $FILE.cpp -g

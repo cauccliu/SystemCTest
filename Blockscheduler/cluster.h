@@ -20,4 +20,5 @@ public:
 
 	Pe *core[core_per_cluster];
 };
+
 #endif /* CLUSTER_H_ */

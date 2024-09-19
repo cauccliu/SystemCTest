@@ -37,13 +37,3 @@ int sc_main(int, char**) {
 
   return 0;
 }
-
-/* #include <iostream>
-#include "Test.h"
-using namespace std;
-int main(){
-  int a = 1;
-  int b = 1;
-  int c = sumA(a,b);
-  return 0;
-} */

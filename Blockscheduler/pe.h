@@ -16,10 +16,14 @@ public:
 			tmp += std::to_string(i);
 			subcore[i] = new SubCore(tmp.c_str());
 		}
+
+		blk_shm_ = new SharedMem(shared_memory_size);
+		cta_bar_ = new AJBarrier(ajbarrier_size);
 	}
 
 	SubCore *subcore[subcore_per_core];
-
+	SharedMem* blk_shm_; // max shared memory per block ：256KB，step 16KB
+	AJBarrier* cta_bar_; // 独立出来
 };
 
 #endif /* PE_H_ */

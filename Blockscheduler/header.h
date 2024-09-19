@@ -12,7 +12,18 @@ enum{
 	thread_per_warp = 32,
 
 	max_warp_num_block = 32,
-	core_per_logic_cluster = 2
+	core_per_logic_cluster = 2,
+
+	shared_memory_size = 256*1024,  
+	ajbarrier_size = 256*1024, // use with shared memory
+
+	cta_num = 32
+};
+
+enum ScheduleMode {
+	MODE1 = 1,
+	MODE2 = 2,
+	MODE3 = 3,
 };
 
 
