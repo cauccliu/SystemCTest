@@ -22,7 +22,7 @@ void bubbleSort(vector<int> &datas)
 }
 
 // 选择排序 不稳定
-// 固定selectIndex is i, j is from i to size, if selectIndex data > j data, change index = j, last swap data index and data i
+// 固定selectIndex is i, j is from i+1 to size, if selectIndex data > j data, change index = j, last swap data index and data i
 void selectSort(vector<int>&datas){
     size_t size = datas.size();
     for(int i = 0; i<size; i++){
@@ -59,24 +59,72 @@ void quickSort(vector<int>&datas, int begin, int end){
     int low = begin;
     int high = end;
     int key = datas[low];
+
     while(low<high){
-        while(low<high && datas[high]>key){
+        while(low<high && datas[high] >= key){
             high--;
         }
-        if(low < high){
-            datas[low++] = datas[high]; 
+        if(low <high){
+            datas[low++] = datas[high];
         }
-        while(low<high && datas[low] <= key){
+        while (low<high && datas[low]<=key)
+        {
             low++;
         }
         if(low<high){
-            datas[low] = datas[high--];
+            datas[high--] = datas[low];
         }
+        
     }
 
-    datas[low] = key; // 最左边的low位置的确定下来了
+    datas[low] = key;
     quickSort(datas,begin,low-1);
     quickSort(datas,low+1,end);
+}
+
+// 归并排序 稳定的
+void mergeSortCore(vector<int>& data, vector<int>& dataTemp, int begin, int end) {
+
+	if (begin >= end) return;
+	int len = end - begin, mid = begin + len / 2;
+	int begin1 = begin, end1 = mid, begin2 = mid + 1, end2 = end;
+	mergeSortCore(data, dataTemp, begin1, end1);
+	mergeSortCore(data, dataTemp, begin2, end2);
+	int index = begin;
+	while (begin1 <= end1 && begin2 <= end2) {
+		dataTemp[index++] = data[begin1] < data[begin2] ? data[begin1++] : data[begin2++];
+	}
+
+	while (begin1 <= end1) {
+		dataTemp[index++] = data[begin1++];
+	}
+
+	while (begin2 <= end2) {
+		dataTemp[index++] = data[begin2++];
+	}
+
+	for (index = begin; index <= end; ++index) {
+		data[index] = dataTemp[index];
+	}
+}
+
+void mergeSort(vector<int>& data) {
+	int len = data.size();
+	vector<int> dataTemp(len, 0);
+	mergeSortCore(data, dataTemp, 0, len - 1);
+}
+
+// 二分查找
+int binarySearch(vector<int> &datas, int target){
+    int left = 0;
+    int right = datas.size()-1;
+    while(left<=right){
+        int mid = left + (right-left)/2;
+        if(datas[mid] == target) return mid;
+        else if(datas[mid] > target) left = mid+1;
+        else right = mid -1;
+    }
+    return -1;
 }
 
 int main()
@@ -93,11 +141,16 @@ int main()
     data.push_back(5);
     // bubbleSort(data);
     // selectSort(data);
-    quickSort(data,0,data.size()-1);
+    // quickSort(data,0,data.size()-1);
+    
+    mergeSort(data);
     for (int i = 0; i < data.size(); i++)
     {
-        cout << " " << data[i] << " ";
+        cout << data[i] << " ";
     }
     cout << endl;
+
+    int res = binarySearch(data,5);
+    cout << res << endl;
     return 0;
 }

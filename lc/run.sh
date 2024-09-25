@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE=bubbleSort
+FILE=list
 
 rm -rf $FILE
 g++ -std=c++17 -o $FILE $FILE.cpp -g
