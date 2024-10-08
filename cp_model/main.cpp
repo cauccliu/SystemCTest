@@ -49,7 +49,7 @@ public:
     cp_test->initWptr(wptr_update); 
 
     SC_THREAD(NotifyWptr);   
-    sensitive <<  wptr_update;    
+    // sensitive <<  wptr_update;    
   }
 
   void NotifyWptr(){
@@ -71,10 +71,8 @@ public:
 };
 
 int sc_main(int argc, char **argv){
-
   Top top("top");
   sc_start(15,SC_NS);
-
   return 0;
 }
 

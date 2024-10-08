@@ -1,0 +1,17 @@
+typora破解码，邮箱123@qq.com，序列号：B5AZ6X-7SH5PK-KDWL9W-6ABBJU
+
+使用教程：https://blog.csdn.net/qq_61621323/article/details/141036982
+
+1. 把解压出来的两个 exe 文件复制到 Typora 的安装目录下。
+
+2. 以管理员身份运行 CMD。
+
+3. 输入“cd 安装路径”，按回车，跳转到 Typora 再重新激活的。安装路径。
+
+4. 先输入 node_inject.exe 按回车，等待提示"done!"。
+
+5. 再输入 license-gen.exe 按回车，等待显示序列号。
+
+6. 打开 Typora 并输入序列号激活。
+
+7. 更新后可能导致无法激活，需要先彻底卸载 Typora 再重新激活。

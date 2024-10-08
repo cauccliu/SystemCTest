@@ -60,7 +60,7 @@ uint32_t* AJQueue::getIbufPtr(uint64_t data){  //ringbuffer到 ibuf地址map
 void AJQueue::CpIndirectBuffer(){//根据ring所指向的地址（indirectbuffer里）取command，后续可能要添加与global memory交互，考虑溢出,建模最好指针操作，这样不容易错
     
     int header_body_dws = 0;    //command的长度
-    uint32_t command_header ;
+    uint32_t command_header;
 
     if(queue_pause == 0){
         ibuf_ptr = getIbufPtr(mes.addr);

@@ -73,3 +73,133 @@ now parsing command The time is  12 ns!  command is 5 offset is 0 queue id is 3
 cp read trans  data = 0 queue_status = 1  at time 12 ns queue_sync = 1  queue id = 3  all_queue_status = f
 22222
 22222
+
+        SystemC 3.0.0-Accellera --- Aug 12 2024 15:02:35
+        Copyright (c) 1996-2024 by all Contributors,
+        ALL RIGHTS RESERVED
+wptr_update at time 3 ns
+Queue id = 0
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  0  at time 3 ns queue_sync = 0  queue id 0  all_queue_status = 1
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  3 ns!  command is 5 offset is 0 queue id is 0
+now parsing command The time is  4 ns!  command is 6 offset is 1 queue id is 0
+now parsing command The time is  5 ns!  command is 7 offset is 2 queue id is 0
+now parsing command The time is  6 ns!  command is 8 offset is 3 queue id is 0
+wptr_update at time 6 ns
+Queue id = 1
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  0  at time 6 ns queue_sync = 0  queue id 1  all_queue_status = 3
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  6 ns!  command is 5 offset is 0 queue id is 1
+now parsing command The time is  7 ns!  command is 9 offset is 4 queue id is 0
+now parsing command The time is  7 ns!  command is 6 offset is 1 queue id is 1
+cp read trans  data = 0 queue_status = 0  at time 8 ns queue_sync = 0  queue id = 0  all_queue_status = 3
+now parsing command The time is  8 ns!  command is 7 offset is 2 queue id is 1
+now parsing command The time is  9 ns!  command is 8 offset is 3 queue id is 1
+22222
+cp read trans  data = 0 queue_status = 0  at time 9 ns queue_sync = 1  queue id = 0  all_queue_status = 3
+device_sync at time 9 ns
+wptr_update at time 9 ns
+Queue id = 2
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  1  at time 9 ns queue_sync = 1  queue id 2  all_queue_status = 7
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  9 ns!  command is 5 offset is 0 queue id is 2
+cp read trans  data = 0 queue_status = 1  at time 9 ns queue_sync = 1  queue id = 2  all_queue_status = 7
+now parsing command The time is  10 ns!  command is 9 offset is 4 queue id is 1
+22222
+22222
+device_sync at time 10 ns
+cp read trans  data = 0 queue_status = 0  at time 11 ns queue_sync = 0  queue id = 1  all_queue_status = 7
+22222
+cp read trans  data = 0 queue_status = 0  at time 12 ns queue_sync = 1  queue id = 1  all_queue_status = 7
+device_sync at time 12 ns
+wptr_update at time 12 ns
+Queue id = 3
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  1  at time 12 ns queue_sync = 1  queue id 3  all_queue_status = f
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  12 ns!  command is 5 offset is 0 queue id is 3
+cp read trans  data = 0 queue_status = 1  at time 12 ns queue_sync = 1  queue id = 3  all_queue_status = f
+22222
+22222
+*****************************************************
+        SystemC 3.0.0-Accellera --- Aug 12 2024 15:02:35
+        Copyright (c) 1996-2024 by all Contributors,
+        ALL RIGHTS RESERVED
+
+Warning: (W536) immediate self-notification ignored as of IEEE 1666-2011: top.NotifyWptr
+In file: kernel/sc_process.cpp:360
+In process: top.NotifyWptr @ 3 ns
+wptr_update at time 3 ns
+Queue id = 0
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  0  at time 3 ns queue_sync = 0  queue id 0  all_queue_status = 1
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  3 ns!  command is 5 offset is 0 queue id is 0
+now parsing command The time is  4 ns!  command is 6 offset is 1 queue id is 0
+now parsing command The time is  5 ns!  command is 7 offset is 2 queue id is 0
+now parsing command The time is  6 ns!  command is 8 offset is 3 queue id is 0
+wptr_update at time 6 ns
+Queue id = 1
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  0  at time 6 ns queue_sync = 0  queue id 1  all_queue_status = 3
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  6 ns!  command is 5 offset is 0 queue id is 1
+now parsing command The time is  7 ns!  command is 9 offset is 4 queue id is 0
+now parsing command The time is  7 ns!  command is 6 offset is 1 queue id is 1
+cp read trans  data = 0 queue_status = 0  at time 8 ns queue_sync = 0  queue id = 0  all_queue_status = 3
+now parsing command The time is  8 ns!  command is 7 offset is 2 queue id is 1
+now parsing command The time is  9 ns!  command is 8 offset is 3 queue id is 1
+22222
+cp read trans  data = 0 queue_status = 0  at time 9 ns queue_sync = 1  queue id = 0  all_queue_status = 3
+device_sync at time 9 ns
+wptr_update at time 9 ns
+Queue id = 2
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  1  at time 9 ns queue_sync = 1  queue id 2  all_queue_status = 7
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  9 ns!  command is 5 offset is 0 queue id is 2
+cp read trans  data = 0 queue_status = 1  at time 9 ns queue_sync = 1  queue id = 2  all_queue_status = 7
+now parsing command The time is  10 ns!  command is 9 offset is 4 queue id is 1
+22222
+22222
+device_sync at time 10 ns
+cp read trans  data = 0 queue_status = 0  at time 11 ns queue_sync = 0  queue id = 1  all_queue_status = 7
+22222
+cp read trans  data = 0 queue_status = 0  at time 12 ns queue_sync = 1  queue id = 1  all_queue_status = 7
+device_sync at time 12 ns
+wptr_update at time 12 ns
+Queue id = 3
+Key1: a, Value: 5
+mes.addr = a
+trans = { W, 0 } , data = a queue_status  1  at time 12 ns queue_sync = 1  queue id 3  all_queue_status = f
+Key: a, Value: 5
+it.first = a
+ibuf_ptr = 5
+now parsing command The time is  12 ns!  command is 5 offset is 0 queue id is 3
+cp read trans  data = 0 queue_status = 1  at time 12 ns queue_sync = 1  queue id = 3  all_queue_status = f
+22222
+22222

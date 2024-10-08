@@ -1,10 +1,14 @@
 #!/bin/bash
 
-FILE=add
+gcc -c -no-pie example.s -o example.o
+gcc -no-pie example.o -o example
+./example
 
-g++ -S -o add.s add.cpp # 包含调试信息
+# FILE=add
 
-./clean_asm.sh add.s  # 去除不必要的信息 
+# g++ -S -o add.s add.cpp # 包含调试信息
+
+# ./clean_asm.sh add.s  # 去除不必要的信息 
 
 
 # rm -rf $FILE

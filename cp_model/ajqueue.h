@@ -41,7 +41,7 @@ public:
         socket_cp2queue.register_b_transport(this, &AJQueue::b_transport);
         SC_THREAD(Thread_Queue);
     //dont_initialize();
-        sensitive <<  received_from_cp ;  
+        sensitive <<  received_from_cp;  
     }
 
     void Thread_Queue();
